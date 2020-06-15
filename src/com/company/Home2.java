@@ -9,5 +9,6 @@ public class Home2 {
             n = n + i;
         }
         System.out.println("Ответ: " + n);
+        .рпмловфардломрфвдлао;
     }
 }

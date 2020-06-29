@@ -16,16 +16,12 @@ public class Task_1 {
         }
         int[][] array = new int[size][size];
         for (int i = 0; i < array.length / 2 + 1; i++) {
-            for (int j = 0; j < array[i].length / 2 + 1; j++) {
-                if (i == j) {
-                    for (int k = i; k < array.length; k++) {
-                        for (int l = j; l < array.length - k; l++) {
-                            array[k][l] = layer;
-                            if (l == array.length - k - 1) {
-                                array[k][array.length - layer] = layer;
-                                array[array.length - layer][k] = layer;
-                            }
-                        }
+            for (int k = i; k < array.length; k++) {
+                for (int l = i; l < array.length - k; l++) {
+                    array[k][l] = layer;
+                    if (l == array.length - k - 1) {
+                        array[k][array.length - layer] = layer;
+                        array[array.length - layer][k] = layer;
                     }
                 }
             }

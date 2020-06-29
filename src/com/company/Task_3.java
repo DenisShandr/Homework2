@@ -7,9 +7,9 @@ public class Task_3 {
         Scanner in = new Scanner(System.in);
         String answer;
 
-        int i = 0;
+        int attempts = 0;
         System.out.print("У вас 3 попытки дать ответ, не знаете ответ, введите \"сдаюсь\". ");
-        while (i < 3){
+        while (attempts < 3){
             System.out.println("Сколько месяцев в году?");
             System.out.print("Ваш ответ: ");
             answer = in.nextLine();
@@ -28,11 +28,11 @@ public class Task_3 {
                     return;
                 default:
                     System.out.print("Неверно! ");
-                    if (i == 2){
+                    if (attempts == 2){
                         System.out.println("Исчерпан лимит ответов!");
                     }
             }
-            i++;
+            attempts++;
         }
     }
 }
